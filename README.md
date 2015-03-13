@@ -18,7 +18,9 @@ npm install libphonenumber
 
 ```javascript
 var libphonenumber = require('libphonenumber')
+var PhoneUtil = libphonenumber.phoneUtil;
 
-//
+//TODO Export original PhoneNumberFormat for format values
+console.log(PhoneUtil.format(nr,1));
 
 ```
