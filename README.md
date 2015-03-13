@@ -20,7 +20,8 @@ npm install libphonenumber
 var libphonenumber = require('libphonenumber')
 var PhoneUtil = libphonenumber.phoneUtil;
 
-//TODO Export original PhoneNumberFormat for format values
-console.log(PhoneUtil.format(nr,1));
+var number = PhoneUtil.parseAndKeepRawInput("05 92 29 20 29", 'fr');
+var formated = PhoneUtil.format(number, 0); //TODO Export original PhoneNumberFormat for format values
+console.log(formated); //Prints: +33592292029
 
 ```
